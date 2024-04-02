@@ -11,6 +11,6 @@ I suggest you read them in the following order:
 
 3. [explaining the tinygrad IR](uops.md)
 
-4. [tinygrad backend](backends.md)
+4. [tinygrad backend](backends.md) and [command queue](commandqueue.md)
 
 5. [shapetracker](shapetracker.md) and [dimension merging](mergedim.md)
