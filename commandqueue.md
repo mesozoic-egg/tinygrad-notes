@@ -36,9 +36,8 @@ On a high level, the constructor keep a list of information on what operations
 are required to run, in which order, and the links between schedule items (input and
 output). When you invoke the instance, it will follow those information and 
 actually call the `.exec()` method on the memory buffer and constructed program.
-There are other operations like WAIT and SYNC that need to run. It become a lot more
-obvious how they are handled with now with CommandQueue instead of appearing so
-confusing that i didn't know how to explain in my earlier posts.
+There are other operations like WAIT and SYNC that need to run, they encapsulate
+dependency information which will be discussed later.
 
 Here's the full implementation of the CommandQueue constructor:
 ```python
@@ -87,21 +86,12 @@ and then put it in a dedicated list. We have scheduleitem that exist
 on external device ("EXT", for numpy data), on Metal, and for the return
 value, on cpu ("CLANG"). If the item is a regular kernel for some computation,
 we just add it to the queue for that device. But if it's a memory operation, 
-for example, our two list of arrays to be dot-product'ed on, we do something
-special. Entering the if branch, we first figure out where the destination
-of this buffer is copied to. And then we add "Sync" and "Wait" item to the 
-destination devic queue, and also add a "Copy" to the source device queue.
-Put simply, if we want to copy a number from numpy to GPU, we set up
-a structure like this
-
-```
-CPU queue:
-[COPY]
-GPU queue:
-[WAIT]
-```
-and the execution will start on CPU, and end on GPU, that way if the kernel op
-requires some data, it will know when to call the GPU's API to synchronize data.
+for example, our two list of arrays, we have to encode some dependency. That's 
+because in order for a data to be moved from one device to another, we must make
+sure the source has acknowledged that the data is available. For example,
+if we are moving the end result from GPU back to CPU to be printed, we need 
+to make sure the computation has completed. This part will become clearer when
+I visualize the operations in later sections.
 
 Next is how the invocation actually works, this one is longer.
 
