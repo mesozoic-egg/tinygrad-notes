@@ -22,3 +22,5 @@ The following are better read in order:
 
 Miscellaneous topics:
 1. [shapetracker](shapetracker.md) and [dimension merging](mergedim.md)
+
+2. [profiling](profiling.md)
