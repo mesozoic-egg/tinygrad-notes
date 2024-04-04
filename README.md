@@ -1,5 +1,7 @@
 # Tutorials on Tinygrad
 
+[View on Github](https://github.com/mesozoic-egg/tinygrad-notes)
+
 A series of tutorials that help you understand the internals of tinygrad
 and be better equipped if you want to contribute to it.
 
