@@ -23,7 +23,11 @@ The following are better read in order:
 4. [tinygrad backend](backends.md) and [command queue](commandqueue.md)
 
 
-Miscellaneous topics:
+Miscellaneous topics to read after you finish the above, no particular order
+is assumed:
+
 1. [shapetracker](shapetracker.md) and [dimension merging](mergedim.md)
 
 2. [profiling](profiling.md)
+
+3. [TinyJit](jit.md)
