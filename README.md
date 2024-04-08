@@ -14,23 +14,29 @@ following bite sized writeup might be a more friendly ramp.
 
 The following are better read in order:
 
-1. [high level overview using dot product as example](dotproduct.md)
+1. [High level overview of the abstractions](dotproduct.md)
 
-2. [how kernel fusion starts](scheduleitem.md)
+2. [How kernel fusion works - ScheduleItem](scheduleitem.md)
 
-3. [explaining the tinygrad IR](uops.md)
+3. [The intermediate representation (IR)](uops.md)
 
-4. [tinygrad backend](backends.md) and [command queue](commandqueue.md)
+4. [How GPU code is generated - backends and runtime](backends.md) 
 
 
 Miscellaneous topics to read after you finish the above, no particular order
 is assumed:
 
-1. [shapetracker](shapetracker.md) and [dimension merging](mergedim.md)
+1. [Shapetracker allows for zero cost movement ops](shapetracker.md) 
 
-2. [profiling](profiling.md)
+2. [How dimension merging works](mergedim.md)
 
-3. [TinyJit](jit.md)
+2. [How to profile a run and tune the performance](profiling.md)
+
+3. [How JIT and cache enable faster compilation - TinyJit](jit.md)
+
+4. [Command queue is a better way to handle job dispatch](commandqueue.md)
+
+5. [Multi GPU training](multigpu.md)
 
 ## What is tinygrad?
 
