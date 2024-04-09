@@ -350,6 +350,7 @@ It takes a series of uops, and convert them to the Metal flavoured C++ code,
 this is the definition:
 
 ```python
+{% raw %}
 class MetalLanguage(CStyleLanguage):
   kernel_prefix = "kernel "
   buffer_prefix = "device "
@@ -376,9 +377,10 @@ class MetalLanguage(CStyleLanguage):
     for arg in wmma_args: prefix.append(f"""{arg[3].name}2 __{arg[0]}({arg[2].name}2 m, {arg[2].name}2 n, {arg[3].name}2 o) {{
   simdgroup_{arg[3].name}8x8 a,b,c; a.thread_elements()[0] = m.x; a.thread_elements()[1] = m.y; b.thread_elements()[0] = n.x;
   b.thread_elements()[1] = n.y; c.thread_elements()[0] = o.x; c.thread_elements()[1] = o.y; simdgroup_multiply_accumulate(c, a, b, c);
-  return {arg[3].name}2(c.thread_elements()[0], c.thread_elements()[1]);\n\}}""")
+  return {arg[3].name}2(c.thread_elements()[0], c.thread_elements()[1]);\n}}""")
     return super().render_kernel(function_name, kernel, bufs, uops, prefix)
 MetalRenderer = functools.partial(uops_to_cstyle, MetalLanguage())
+{% raw %}
 ```
 
 Remember the [official guide](https://github.com/tinygrad/tinygrad/blob/master/docs/adding_new_accelerators.md) 
