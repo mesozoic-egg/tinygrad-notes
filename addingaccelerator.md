@@ -380,7 +380,7 @@ class MetalLanguage(CStyleLanguage):
   return {arg[3].name}2(c.thread_elements()[0], c.thread_elements()[1]);\n}}""")
     return super().render_kernel(function_name, kernel, bufs, uops, prefix)
 MetalRenderer = functools.partial(uops_to_cstyle, MetalLanguage())
-{% raw %}
+{% endraw %}
 ```
 
 Remember the [official guide](https://github.com/tinygrad/tinygrad/blob/master/docs/adding_new_accelerators.md) 
