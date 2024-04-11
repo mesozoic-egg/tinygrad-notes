@@ -74,7 +74,7 @@ v = v.permute((1,0)) # This is the syntax for swapping row and column, it reads:
 print(v.expr_idxs()[0].render()) # --> idx1 * 2 + idx0
 ```
 
-After permuting it, we see the access pattern changed, and if you are accessing the data as `permuted_grid[2,3]` then the data will be at `data[3 * 2 + 2]` (`data[8]`). Whereas previously it would be `data[2 * 2 + 3]`, and that's indeed what happens when you swap the column and row!
+After permuting it, we see the access pattern changed, and if you are accessing the data as `permuted_grid[1,3]` then the data will be at `data[3 * 2 + 1]` (`data[7]`). Whereas previously it would be `data[1 * 2 + 3]`, and that's indeed what happens when you swap the column and row!
 ```
 [
   [a,b],
