@@ -115,8 +115,8 @@ I will focus on the `linearize()` method in this post:
 ```
 
 It's actually a very long function. An important property to keep an eye on
-is the `uops` attribute on the Linearizer instance, This attribute contains a list
-of, you guessed it, Uops, which is what we saw earlier when I printedd the entire
+is the `uops` attribute on the Linearizer instance. This attribute contains a list
+of, you guessed it, Uops, which is what we saw earlier when I printed the entire
 UOps list. So by looking at when and where items are added to the list, we can 
 make sense of how the process works.
 
