@@ -90,7 +90,7 @@ c {
 
 Try matching the python code to the structure above. The two "EXT" at the end
 are the two list we have provided, and they are being first multiplied, and then
-summed, producing the final input. 
+summed, producing the final output. 
 
 Recall that the generated kernel code looks like below:
 ```
