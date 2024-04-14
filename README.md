@@ -37,6 +37,8 @@ Miscellaneous topics:
 
 1. [Adding custom accelerator](addingaccelerator.md)
 
+1. [Code generator](codegen.md)
+
 ## What is tinygrad?
 
 Tinygrad stands out as a deep learning framework, akin to Pytorch, XLA, and ArrayFire, 
