@@ -80,7 +80,7 @@ The most obvious problem with this solution isn't actually speed, but rather
 memory because it requires you to hold all of elements of A, B and C in 
 fast access memory. The compute order is how you would read the result table
 seen above, from left to right, top to bottom: 
-`aA = bB, aC+bD, aE+bF,... cA+dB, cC+dD, cE+dF...`
+`aA+bB, aC+bD, aE+bF,... cA+dB, cC+dD, cE+dF...`
 
 As you can see, if you want this to be fast, you want to make sure every single
 element can be accessed quickly. There's also some waste, for example, you would
