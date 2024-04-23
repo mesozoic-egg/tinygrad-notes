@@ -37,7 +37,7 @@ Miscellaneous topics:
 
 1. [Adding custom accelerator](addingaccelerator.md)
 
-1. [Code generator](codegen.md)
+1. [Code generator](codegen.md) and [details on common UOPS](uops-doc.md)
 
 ## What is tinygrad?
 
