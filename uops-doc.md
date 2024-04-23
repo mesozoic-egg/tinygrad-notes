@@ -1,8 +1,25 @@
 # Documentation on Tinygrad's IR
 
-Each uop represent an operation in tinygrad's intermediate representation,
-also known as the graph.
-They are inserted as follows:
+Tinygrad operates on fundamental primitive operations called Uops, categorized as follows:
+
+1. ALU: Models hardware capabilities to manipulate tensor combinations.
+2. Movement: Defines data sharing between devices, resolves data dependencies for ALU operations.
+3. Directives: Models decision points in the code, controlling execution.
+
+These building blocks enable op-wise backpropagation and gradient calculations. Complex functions, like a Sigmoid activation layer, can be expressed using these ops. Ops remain device-agnostic, retaining the properties of their assigned datatypes. Lazy realization optimizes scheduling based on hardware constraints and operational feedback.
+
+When performing any operation on a tensor, such as addition:
+
+```python
+a = Tensor([1], dtype=int)
+b = Tensor([2], dtype=int)
+c = a + b
+c.realize()
+```
+
+This automatically executes the ALU operation for addition, defined in tensor.py's `__add__`, storing the result on the default device. Graphs can be visualized using graphing tools.
+
+We can construct elements of a graph by hand in this way:
 
 ```python
 from tinygrad.codegen.uops import UOpGraph, UOps
