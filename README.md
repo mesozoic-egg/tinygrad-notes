@@ -39,6 +39,8 @@ Miscellaneous topics:
 
 1. [Code generator](codegen.md) and [details on common UOPS](uops-doc.md)
 
+1. [Tensor core support part 1](cuda-tensor-core-pt1.md)
+
 ## What is tinygrad?
 
 Tinygrad stands out as a deep learning framework, akin to Pytorch, XLA, and ArrayFire, 
