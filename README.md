@@ -41,6 +41,8 @@ Miscellaneous topics:
 
 1. [Tensor core support part 1](cuda-tensor-core-pt1.md)
 
+1. [Loop unrolling (upcast)](upcast.md)
+
 ## What is tinygrad?
 
 Tinygrad stands out as a deep learning framework, akin to Pytorch, XLA, and ArrayFire, 
