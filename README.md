@@ -41,7 +41,7 @@ Miscellaneous topics:
 
 1. [Tensor core support part 1](cuda-tensor-core-pt1.md)
 
-1. [Loop unrolling (upcast)](upcast.md)
+1. [Loop unrolling (upcast)](upcast.md) and [the underlying Symbolic library](upcast2.md)
 
 ## What is tinygrad?
 
