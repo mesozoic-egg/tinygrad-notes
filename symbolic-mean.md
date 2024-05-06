@@ -197,8 +197,10 @@ within itself. However, calculating the mean requires you to divide the sum
 by a new value, and this new value has to be of type tensor. Similarly, 
 you can see that `max` and `min` also work, whereas `std` and `var` do not.
 The goal of the bounty is now clear - allow Tensor to accept symbolic values.
-Let's look at how things might be done, when you create a tensor, its initializer
-checks the data type:
+
+
+Let's look at where to get started, aka where the error was thrown, when you create a 
+tensor, its initializer checks the data type:
 
 ```python
     if isinstance(data, LazyBuffer): assert dtype is None or dtype == data.dtype, "dtype doesn't match, and casting isn't supported"
@@ -209,8 +211,10 @@ checks the data type:
       self.lazydata: Union[LazyBuffer, MultiLazyBuffer] = MultiLazyBuffer.from_sharded(data, device, None) if isinstance(data, LazyBuffer) else data
     else:
       self.lazydata = data if data.device == device else data.copy_to_device(device)
-
 ```
+
+The starting point would be to make this initializer accept `Variable` and have 
+downstream operations to recognize this datatype.
 
 Feel free to now take a look at the PR that implemented it and hopefully
 it become clear what it accomplished: https://github.com/tinygrad/tinygrad/pull/4362
