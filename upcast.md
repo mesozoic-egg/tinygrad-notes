@@ -71,20 +71,31 @@ guide, but the key here is we see the LOOP and ENDLOOP instruction. In the
 second version, however, we don't see it:
 
 ```
-   0 UOps.DEFINE_GLOBAL  : ptr.dtypes.float          []                               (0, 'data0', True)
-   1 UOps.DEFINE_GLOBAL  : ptr.dtypes.float          []                               (1, 'data1', False)
-   2 UOps.DEFINE_GLOBAL  : ptr.dtypes.float          []                               (2, 'data2', False)
-   3 UOps.DEFINE_ACC     : dtypes.float              []                               0.0
+   0 UOps.DEFINE_GLOBAL  : ptr.dtypes.int            []                               (0, 'data0', True)
+   1 UOps.DEFINE_GLOBAL  : ptr.dtypes.int            []                               (1, 'data1', False)
+   2 UOps.DEFINE_GLOBAL  : ptr.dtypes.int            []                               (2, 'data2', False)
+   3 UOps.DEFINE_ACC     : dtypes.int                []                               0
    4 UOps.CONST          : dtypes.int                []                               0
-   5 UOps.CONST          : dtypes.int                []                               3
-   6 UOps.LOOP           : dtypes.int                [4, 5]                           None
-   7 UOps.LOAD           : dtypes.float              [1, 6]                           None
-   8 UOps.LOAD           : dtypes.float              [2, 6]                           None
-   9 UOps.ALU            : dtypes.float              [7, 8]                           BinaryOps.MUL
-  10 UOps.ALU            : dtypes.float              [9, 3]                           BinaryOps.ADD
-  11 UOps.PHI            : dtypes.float              [3, 10, 6]                       None
-  12 UOps.ENDLOOP        :                           [6]                              None
-  13 UOps.STORE          :                           [0, 4, 11]                       None
+   5 UOps.LOAD           : dtypes.int                [1, 4]                           None
+   6 UOps.CONST          : dtypes.int                []                               1
+   7 UOps.LOAD           : dtypes.int                [1, 6]                           None
+   8 UOps.CONST          : dtypes.int                []                               2
+   9 UOps.LOAD           : dtypes.int                [1, 8]                           None
+  10 UOps.CONST          : dtypes.int                []                               3
+  11 UOps.LOAD           : dtypes.int                [1, 10]                          None
+  12 UOps.LOAD           : dtypes.int                [2, 4]                           None
+  13 UOps.LOAD           : dtypes.int                [2, 6]                           None
+  14 UOps.LOAD           : dtypes.int                [2, 8]                           None
+  15 UOps.LOAD           : dtypes.int                [2, 10]                          None
+  16 UOps.ALU            : dtypes.int                [5, 12]                          BinaryOps.MUL
+  17 UOps.ALU            : dtypes.int                [7, 13]                          BinaryOps.MUL
+  18 UOps.ALU            : dtypes.int                [9, 14]                          BinaryOps.MUL
+  19 UOps.ALU            : dtypes.int                [11, 15]                         BinaryOps.MUL
+  20 UOps.ALU            : dtypes.int                [16, 3]                          BinaryOps.ADD
+  21 UOps.ALU            : dtypes.int                [17, 20]                         BinaryOps.ADD
+  22 UOps.ALU            : dtypes.int                [18, 21]                         BinaryOps.ADD
+  23 UOps.ALU            : dtypes.int                [19, 22]                         BinaryOps.ADD
+  24 UOps.STORE          :                           [0, 4, 23]                       None
 ```
 
 The uops are generated via the `.linearize()` method invocation in the `Linearizer`
