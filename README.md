@@ -45,6 +45,10 @@ Miscellaneous topics:
 
 1. [Interpreting colors and numbers in kernel names](colors.md)
 
+Bounty explanations:
+
+1. [Symbolic mean](symbolic-mean.md)
+
 ## What is tinygrad?
 
 Tinygrad stands out as a deep learning framework, akin to Pytorch, XLA, and ArrayFire, 
