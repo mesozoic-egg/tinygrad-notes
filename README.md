@@ -10,6 +10,12 @@ and [abstraction guide](https://github.com/tinygrad/tinygrad/blob/master/docs/ab
 are great resources, but may not be so beginner friendly, the following might be
 more digestable.
 
+Recent updates:
+
+- [Computer algebra study notes](https://github.com/mesozoic-egg/computer-algebra-study-notes/tree/main), this may not be directly related to
+tinygrad, but a lot of the optimization in tinygrad deals with computer algebra, 
+feel free to check this out.
+
 Fundamentals (better read in orders):
 
 1. [High level overview of the abstractions](dotproduct.md)
