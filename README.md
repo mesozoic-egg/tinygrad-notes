@@ -16,6 +16,8 @@ Recent updates:
 tinygrad, but a lot of the optimization in tinygrad deals with computer algebra, 
 feel free to check this out.
 
+- [Abstractions in Apple's Metal framework](20240921_metal.md)
+
 Fundamentals (better read in orders):
 
 1. [High level overview of the abstractions](dotproduct.md)
