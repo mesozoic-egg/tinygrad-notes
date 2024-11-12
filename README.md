@@ -12,6 +12,8 @@ more digestable.
 
 Recent updates:
 
+- [Pattern matcher](20241112_pm.md)
+
 - [Computer algebra study notes](https://github.com/mesozoic-egg/computer-algebra-study-notes/tree/main), this may not be directly related to
 tinygrad, but a lot of the optimization in tinygrad deals with computer algebra, 
 feel free to check this out.
