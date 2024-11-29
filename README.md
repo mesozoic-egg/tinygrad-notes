@@ -5,12 +5,10 @@
 
 A series of tutorials/study-notes that help you understand the internals of tinygrad
 and equip you to start contributing to it. 
-The [quickstart guide](https://github.com/tinygrad/tinygrad/blob/master/docs/quickstart.md)
-and [abstraction guide](https://github.com/tinygrad/tinygrad/blob/master/docs/abstractions2.py)
-are great resources, but may not be so beginner friendly, the following might be
-more digestable.
 
 Recent updates:
+
+- [VIZ=1 visualizing the graph rewrite](20241129_viz.md)
 
 - [Pattern matcher](20241112_pm.md)
 
