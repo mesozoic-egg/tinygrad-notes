@@ -33,6 +33,8 @@ Miscellaneous topics:
 
 1. [Shapetracker allows for zero cost movement ops](shapetracker.md) 
 
+1. [shape tracker visualizer](https://mesozoic-egg.github.io/shape-stride-visualizer/#/shape-stride)
+
 1. [How dimension merging works](mergedim.md)
 
 1. [How to profile a run and tune the performance](profiling.md)
