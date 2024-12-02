@@ -8,6 +8,8 @@ and equip you to start contributing to it.
 
 Recent updates:
 
+- [The trick in matrix multiplication](20241203_matmul.md)
+
 - [VIZ=1 visualizing the graph rewrite](20241129_viz.md)
 
 - [Pattern matcher](20241112_pm.md)
