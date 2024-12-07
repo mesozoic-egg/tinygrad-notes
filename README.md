@@ -8,6 +8,8 @@ and equip you to start contributing to it.
 
 Recent updates:
 
+- [The trick in convolution and arange](20241208_conv.md)
+
 - [BEAM search and kernel optimization](20241203_beam.md)
 
 - [The trick in matrix multiplication](20241203_matmul.md)
