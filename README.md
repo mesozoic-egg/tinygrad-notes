@@ -8,6 +8,8 @@ and equip you to start contributing to it.
 
 Recent updates:
 
+- [Shapetracker explained](20241217_st.md)
+
 - [The trick in convolution and arange](20241208_conv.md)
 
 - [BEAM search and kernel optimization](20241203_beam.md)
@@ -37,11 +39,11 @@ Fundamentals (better read in orders):
 
 Miscellaneous topics:
 
-1. [Shapetracker allows for zero cost movement ops](shapetracker.md) 
+~~1. [Shapetracker allows for zero cost movement ops](shapetracker.md) ~~
 
 1. [shape tracker visualizer](https://mesozoic-egg.github.io/shape-stride-visualizer/#/shape-stride)
 
-1. [How dimension merging works](mergedim.md)
+~~ 1. [How dimension merging works](mergedim.md)~~
 
 1. [How to profile a run and tune the performance](profiling.md)
 
@@ -57,13 +59,10 @@ Miscellaneous topics:
 
 1. [Tensor core support part 1](cuda-tensor-core-pt1.md)
 
-1. [Loop unrolling (upcast)](upcast.md) and [the underlying Symbolic library](upcast2.md)
+~~1. [Loop unrolling (upcast)](upcast.md) and [the underlying Symbolic library](upcast2.md)~~
 
 1. [Interpreting colors and numbers in kernel names](colors.md)
 
-Bounty explanations:
-
-1. [Symbolic mean](symbolic-mean.md)
 
 ## What is tinygrad?
 
