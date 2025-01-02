@@ -8,6 +8,8 @@ and equip you to start contributing to it.
 
 - [Introduction](20241231_intro.md): **Read this first!!**
 
+- [JIT explained](20240102_jit.md)
+
 - [Shapetracker explained](20241217_st.md)
 
 - [The trick in convolution and arange](20241208_conv.md)
@@ -20,4 +22,3 @@ and equip you to start contributing to it.
 
 - [Pattern matcher](20241112_pm.md)
 
-> I removed the outdated ones, they are still kept in the Github repo, if you need them
