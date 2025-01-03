@@ -7,7 +7,7 @@ All of the pre-requisite knowledge you need before contributing to tinygrad.
 
 - [Introduction](20241231_intro.md): **Read this first!!**
 
-- [JIT explained](20240102_jit.md)
+- [JIT explained](20250102.md)
 
 - [Shapetracker explained](20241217_st.md)
 
