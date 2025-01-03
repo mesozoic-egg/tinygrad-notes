@@ -3,8 +3,7 @@
 [View on Github](https://github.com/mesozoic-egg/tinygrad-notes) |
 [View on Website](https://mesozoic-egg.github.io/tinygrad-notes)
 
-A series of tutorials/study-notes that help you understand the internals of tinygrad
-and equip you to start contributing to it. 
+All of the pre-requisite knowledge you need before contributing to tinygrad.
 
 - [Introduction](20241231_intro.md): **Read this first!!**
 
