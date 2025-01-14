@@ -21,3 +21,6 @@ All of the pre-requisite knowledge you need before contributing to tinygrad.
 
 - [Pattern matcher](20241112_pm.md)
 
+Misc.
+
+- [Memoryview](20250114_memoryview.md)
