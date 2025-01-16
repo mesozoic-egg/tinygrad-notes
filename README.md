@@ -24,3 +24,5 @@ All of the pre-requisite knowledge you need before contributing to tinygrad.
 Misc.
 
 - [Memoryview](20250114_memoryview.md)
+
+- [Operator fusion](20250117_fusion.md)
