@@ -28,8 +28,30 @@ const2 = UOp(Ops.CONST, dtypes.float, arg=0.5)
 buf1 = UOp(Ops.DEFINE_GLOBAL, arg=1)
 buf2 = UOp(Ops.DEFINE_GLOBAL, arg=2)
 a = UOp(Ops.ADD, src=(const1, buf1))
+print(a)
+"""
+UOp(Ops.ADD, dtypes.void, arg=None, src=(
+  UOp(Ops.CONST, dtypes.float, arg=0.5, src=()),
+  UOp(Ops.DEFINE_GLOBAL, dtypes.void, arg=1, src=()),))
+"""
+
 b = UOp(Ops.ADD, src=(const1, buf1))
+"""
+UOp(Ops.ADD, dtypes.void, arg=None, src=(
+  UOp(Ops.CONST, dtypes.float, arg=0.5, src=()),
+  UOp(Ops.DEFINE_GLOBAL, dtypes.void, arg=1, src=()),))
+"""
+
 c = UOp(Ops.ADD, src=(const1, buf2))
+print(c)
+"""
+UOp(Ops.ADD, dtypes.void, arg=None, src=(
+  UOp(Ops.CONST, dtypes.float, arg=0.5, src=()),
+  UOp(Ops.DEFINE_GLOBAL, dtypes.void, arg=2, src=()),))
+"""
+
+
+
 print(a == b) # True
 print(a == c) # False
 print(b == c) # False
