@@ -26,3 +26,5 @@ Misc.
 - [Memoryview](20250114_memoryview.md)
 
 - [Operator fusion](20250117_fusion.md)
+
+- [UOp is singleton](20250119_uop_singleton.md)
