@@ -28,3 +28,5 @@ Misc.
 - [Operator fusion](20250117_fusion.md)
 
 - [UOp is singleton](20250119_uop_singleton.md)
+
+- [LOP3 instruction in PTX and SASS](20250325_lop3_table.md)
