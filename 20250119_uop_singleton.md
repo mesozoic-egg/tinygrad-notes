@@ -57,9 +57,9 @@ print(a == c) # False
 print(b == c) # False
 ```
 
-Note that the UOp usage here are just made up. The actual UOp tinygrad generated are more complex and have more rules.
+Note that the UOp usage here is just made up. The actual UOp tinygrad generated are more complex and have more rules.
 
-## Checking if two uop trees are almost equal
+## Checking if two UOp trees are almost equal
 
 Singleton pattern makes it easy to modify, transform and compare the AST. For example if you want to check if your trees
 are "almost equal". We can see that `a` and `c` only differs in their `Ops.DEFINE_GLOBAL`. You can write a function
