@@ -14,7 +14,7 @@ If the four arguments: `op`, `dtype`, `src`, `arg` are the same, then the same c
 being created. This means you can do comparison directly on two UOp tree:
 
 ```python
-from tinygrad.ops import UOp, Ops
+from tinygrad.uop.ops import UOp, Ops
 const1 = UOp(Ops.CONST, dtypes.float, arg=0.5)
 const2 = UOp(Ops.CONST, dtypes.float, arg=0.5)
 print(const1 == const2) # True
